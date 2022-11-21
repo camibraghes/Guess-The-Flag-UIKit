@@ -34,6 +34,8 @@ class ViewController: UIViewController {
         thirdButton.layer.borderWidth = 0.3
         thirdButton.layer.cornerRadius = 4
         thirdButton.layer.borderColor = UIColor.gray.cgColor
+        
+        self.view.backgroundColor = UIColor.systemGroupedBackground
     }
     
     func askQuestion() {
