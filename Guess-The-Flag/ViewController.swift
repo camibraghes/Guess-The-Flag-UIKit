@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         countries += ["Estonia", "France", "Germany", "Ireland", "Italy", "Monaco", "Nigeria", "Poland", "Russia", "Spain", "Uk", "Us"]
-        askQuestion()
+        askQuestion(action: nil)
         
         firstButton.layer.borderWidth = 0.3
         firstButton.layer.cornerRadius = 4
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor.systemGroupedBackground
     }
     
-    func askQuestion() {
+    func askQuestion(action: UIAlertAction!) {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
         
@@ -49,6 +49,22 @@ class ViewController: UIViewController {
         title = "Guess the flag for \(countries[correctAnswer].uppercased())"
     }
     
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        var title: String
+        
+        if sender.tag == correctAnswer {
+            title = "Correct"
+            score += 10
+        } else {
+            title = "Wrong"
+            score -= 10
+        }
+        
+        let ac = UIAlertController(title: title, message: "Your score is: \(score)", preferredStyle: .alert)
+        
+        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+        present(ac, animated: true)
+    }
     
 }
 
