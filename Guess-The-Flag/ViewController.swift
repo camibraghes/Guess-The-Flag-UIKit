@@ -24,12 +24,15 @@ class ViewController: UIViewController {
         askQuestion()
         
         firstButton.layer.borderWidth = 0.3
+        firstButton.layer.cornerRadius = 4
         firstButton.layer.borderColor = UIColor.gray.cgColor
         
         secondButton.layer.borderWidth = 0.3
+        secondButton.layer.cornerRadius = 4
         secondButton.layer.borderColor = UIColor.gray.cgColor
         
         thirdButton.layer.borderWidth = 0.3
+        thirdButton.layer.cornerRadius = 4
         thirdButton.layer.borderColor = UIColor.gray.cgColor
     }
     
