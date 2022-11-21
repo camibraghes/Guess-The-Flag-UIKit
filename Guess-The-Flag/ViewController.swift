@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  Guess-The-Flag
-//
-//  Created by Camelia Braghes on 21.11.2022.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -46,7 +39,7 @@ class ViewController: UIViewController {
         secondButton.setImage(UIImage(named: countries[1]), for: .normal)
         thirdButton.setImage(UIImage(named: countries[2]), for: .normal)
         
-        title = "Guess the flag for \(countries[correctAnswer].uppercased())"
+        title = "Tap the flag \(countries[correctAnswer].uppercased())"
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
