@@ -9,6 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var firstButton: UIButton!
+    @IBOutlet var secondButton: UIButton!
+    @IBOutlet var thirdButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
